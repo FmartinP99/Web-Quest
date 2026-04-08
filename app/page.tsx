@@ -15,8 +15,8 @@ export default async function Home({ searchParams }: HomeProps) {
   const params = await searchParams;
 
   const filters: JobFilters = {
-    geo: params.geo as JobGeo | undefined,
-    industry: params.industry as Industry | undefined,
+    geo: params?.geo as JobGeo | undefined,
+    industry: params?.industry as Industry | undefined,
   };
 
   const queryClient = new QueryClient();
